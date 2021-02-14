@@ -1,0 +1,17 @@
+{
+  "files.associations": { "*.css": "postcss" },
+  "files.exclude": {
+    "public": false,
+    "node_modules": true
+  },
+  "css.validate": false,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "emmet.syntaxProfiles": {
+    "postcss": "css"
+  }
+}

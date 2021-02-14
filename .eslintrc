@@ -1,0 +1,36 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["prettier", "svelte3"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "arrow-parens": ["off", "as-needed"],
+    "space-in-parens": ["off", "never"],
+    "space-before-function-paren": "off",
+    "newline-per-chained-call": "off",
+    "no-irregular-whitespace": "off",
+    "no-multiple-empty-lines": "off",
+    "no-trailing-spaces": "off",
+    "linebreak-style": "off",
+    "no-extra-semi": "off",
+    "comma-dangle": "off",
+    "quote-props": "off",
+    "new-parens": "off",
+    "eol-last": "off",
+    "max-len": "off",
+    "prettier/prettier": "error"
+  }
+}

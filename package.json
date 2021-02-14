@@ -1,0 +1,53 @@
+{
+  "name": "svelte-tailwind-boilerplate",
+  "version": "1.0.0",
+  "author": "Gregory Salinas",
+  "description": "A boilerplate for Svelte + Tailwind applications built w/ Snowpack",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AGS1130/svelte-tailwind-boilerplate.git"
+  },
+  "scripts": {
+    "dev": "run-p watch:*",
+    "watch:css": "postcss src/assets/css/pre.css -o public/post.css -w",
+    "watch:snowpack": "snowpack dev",
+    "build": "run-s build:css build:snowpack",
+    "build:css": "NODE_ENV=production postcss src/assets/css/pre.css -o public/post.css",
+    "build:snowpack": "snowpack build",
+    "format": "prettier --write \"**/*.svelte\"; exit 0",
+    "stylelint": "stylelint \"**/*.{css,svelte}\"; exit 0",
+    "eslint": "eslint . --ext .svelte",
+    "serve": "live-server build",
+    "start": "npm run serve"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-postcss": "^1.1.0",
+    "@snowpack/plugin-svelte": "^3.5.2",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-svelte3": "^3.0.0",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.3",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.1.4",
+    "snowpack": "^3.0.11",
+    "stylelint": "^13.10.0",
+    "stylelint-config-standard": "^20.0.0",
+    "svelte-preprocess": "^4.6.9",
+    "tailwindcss": "^2.0.3",
+    "tailwindcss-dark-mode": "^1.1.7"
+  },
+  "dependencies": {
+    "svelte": "^3.32.3"
+  }
+}
